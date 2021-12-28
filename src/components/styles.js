@@ -124,6 +124,12 @@ position: absolute;
 box-shadow: 0px 0px 1px 2px white;
 `
 
+export const LangDiv = styled.div`
+display: flex;
+width: 100%;
+height: 3em;
+`
+
 export const Photo = styled.img`
 width: 100%;
 height: 100%;
@@ -133,10 +139,10 @@ border-color: white;
 
 export const SecondRow = styled.div`
 display: flex;
-background-color: black;
+background-color: white;
 z-index: 1;
 width: 100%;
-height: 60%;
+height: 45%;
 border-top: 1px solid white;
 border-bottom: 1px solid white
 `
@@ -169,7 +175,7 @@ export const PhotoText = styled.p`
   color: white;
   font-family: monospace;
   font-size: 1.2em;
-  z-index: 5;
+  z-index: 6;
   text-align: left;
   margin-left: 2em;
   font-style: italic
@@ -183,6 +189,10 @@ export const PhotoText = styled.p`
 @media ${device.laptopL} {
   font-size: 1.4em;
   margin-left: 3em;
+}
+
+&:hover {
+  color: red
 }
 `
 
@@ -228,4 +238,63 @@ export const PhotoTextRight = styled.p`
   font-size: 1.4em;
   margin-right: 2em;
 }
+
+&:hover {
+  color: red
+}
+`
+
+export const SecondLeft = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+height: 100%;
+flex: 1;
+align-items: flex-start;
+background-color: #ffffffe6;
+z-index: 2;
+`
+
+export const SecondLeftText = styled.p`
+color: black;
+font-size: 1.2em;
+width: 100%;
+text-align: center;
+margin: -8em 1em 1em 1em;
+`
+
+export const SecondRight = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+height: 100%;
+flex: 1;
+align-items: flex-start;
+background-color: #0000009c;
+z-index: 2;
+overflow-y: auto;
+`
+
+export const InputBox = styled.div`
+width: 70%;
+height: 25%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`
+
+export const Question = styled.h1`
+color: white;
+font-size: 1.5em;
+width: 100%;
+text-align: center;
+`
+
+export const Input = styled.input`
+width: 85%;
+height: 2em;
+box-shadow: 1px 1px 5px 2px #68c0ff9e;
 `

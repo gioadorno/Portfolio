@@ -44,6 +44,49 @@ justify-content: center;
 flex-direction: column;
 `
 
+export const NameDiv = styled.div`
+@media ${device.mobileS} {
+
+}
+
+@media ${device.tablet} {
+display: flex;
+position: absolute;
+left: 0em;
+top: .5em;
+width: 100%;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+height: 3em;
+z-index: 6;
+}
+
+@media ${device.laptopL} {
+
+}
+`
+
+export const Name = styled.h1`
+@media ${device.mobileS} {
+
+}
+
+@media ${device.tablet} {
+color: white;
+font-size: 2.5em;
+letter-spacing: 4px;
+font-style: italic;
+font-family: emoji;
+z-index: 5;
+margin-left: 3em;
+}
+
+@media ${device.laptopL} {
+
+}
+`
+
 export const Video = styled.video`
 width: 100%;
 height: 120%;
@@ -78,6 +121,7 @@ height: 25%;
 z-index: 4;
 border-color: white;
 position: absolute;
+box-shadow: 0px 0px 1px 2px white;
 `
 
 export const Photo = styled.img`
@@ -92,7 +136,96 @@ display: flex;
 background-color: black;
 z-index: 1;
 width: 100%;
-height: 25%;
+height: 60%;
 border-top: 1px solid white;
 border-bottom: 1px solid white
+`
+
+export const TextDiv = styled.div`
+@media ${device.mobileS} {
+
+}
+
+@media ${device.tablet} {
+
+}
+
+@media ${device.laptopL} {
+
+}
+position: absolute;
+width: 100%;
+display: flex;
+flex-direction: row;
+height: 3em;
+z-index: 5;
+justify-content: flex-start;
+align-items: center;
+`
+
+
+export const PhotoText = styled.p`
+@media ${device.mobileS} {
+  color: white;
+  font-family: monospace;
+  font-size: 1.2em;
+  z-index: 5;
+  text-align: left;
+  margin-left: 2em;
+  font-style: italic
+
+}
+
+@media ${device.tablet} {
+
+}
+
+@media ${device.laptopL} {
+  font-size: 1.4em;
+  margin-left: 3em;
+}
+`
+
+export const TextDivRight = styled.div`
+@media ${device.mobileS} {
+
+}
+
+@media ${device.tablet} {
+
+}
+
+@media ${device.laptopL} {
+
+}
+position: absolute;
+width: 100%;
+display: flex;
+flex-direction: row;
+height: 3em;
+z-index: 5;
+justify-content: flex-end;
+align-items: center;
+`
+
+export const PhotoTextRight = styled.p`
+@media ${device.mobileS} {
+  color: white;
+  font-family: monospace;
+  font-size: 1.2em;
+  z-index: 5;
+  text-align: left;
+  margin-right: 1.3em;
+  font-style: italic
+
+}
+
+@media ${device.tablet} {
+
+}
+
+@media ${device.laptopL} {
+  font-size: 1.4em;
+  margin-right: 2em;
+}
 `

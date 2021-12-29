@@ -65,7 +65,7 @@ const HomePage = ({ language, name, occupation }) => {
                         Google Map API
                     </h1>
                     <SecondLeftText>
-                        To your right (below on mobile), you will see an address form. This form will be used to populate the info submitted to the map. The address you will input, will be using a formula to reverse geocode the address into a unique longitute and latitude, which will then put a pin on the map, utilizing Google Map API. You will also notice that an address will autopopulate, once you start typing, in the address input. <br></br><br></br> I am then taking the information, from the form, to populate an infowindow with your inputs. I originally created this tool to be used in real estate, but it is also a great tool that can be utilized in any business, and can be formatted in any way.
+                        To your right (below on mobile), you will see an address form. This form will be used to populate the info submitted to the map. The address you will input, will be using a formula to reverse geocode the address into a unique longitute and latitude, which will then put a pin on the map, utilizing Google Map API. You will also notice that an address will autopopulate, once you start typing, in the address input. <br></br><br></br> The information, from this form, is then sent to the MongoDB Database utilizing Node, Express, and Mongoose. On the front end I am utilizing Redux to then populate the information and display it on the map.
                     </SecondLeftText>
                 </SecondLeft>
                 <SecondRight>

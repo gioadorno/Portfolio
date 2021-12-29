@@ -116,9 +116,9 @@ const Login = ({ header, label, options, create, login, loginButton, name }) => 
                             </Label>
                             <Select name={name.securityLevel} required autoFocus onChange={handleChange} >
                                 <option />
-                                <option>
+                                {/* <option>
                                     {options.level1}
-                                </option>
+                                </option> */}
                                 <option>
                                     {options.level2}
                                 </option>
@@ -157,7 +157,7 @@ const Login = ({ header, label, options, create, login, loginButton, name }) => 
                             {loginButton}
                         </LoginButton>
                         <Paragraph>
-                            This section is to showcase creating a user and logging in with Authentication. I have also added a feature, if you have different security privileges, you will see different information related to that security level on the right hand side. Passwords are also encrypted utilizing Bcrypt. For general security reasons, please do not use a password you typically use, on this website, even though they are encrypted. Just makeup an easy one, so you can look at the features. <br/> The page will refresh once you login, so it will appropriately log you in.
+                            This section is to showcase creating a user and logging in with Authentication. I have also added a feature, if you have different security privileges, you will see different information related to that security level on the right hand side. Passwords are also encrypted utilizing Bcrypt. For general security reasons, please do not use a password you typically use, on this website, even though they are encrypted. Just makeup an easy one, so you can look at the features. <br/> Plus I have included fun facts about myself!
                         </Paragraph>
                     </LoginDiv>
                 </MiddleDiv>

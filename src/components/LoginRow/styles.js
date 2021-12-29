@@ -43,7 +43,7 @@ export const Background = styled.img`
     }
   
     @media ${device.laptopL} {
-        height: 100%;
+        height: 80%;
         width: 100%;
     }
 `
@@ -446,3 +446,4 @@ font-size: 1.9em;
     color: red;
 }
 `
+

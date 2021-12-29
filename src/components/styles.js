@@ -28,20 +28,28 @@ export const MainDiv = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
-height: 210em;
+height: 190em;
 background-color: #f7ffff;
 justify-content: flex-start;
 align-items: center;
 `
 
 export const TopDiv = styled.div`
-display: flex;
-width: 100%;
-height: 45%;
-border-bottom: 1px solid black;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+@media ${device.tablet} {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+@media ${device.laptopL} {
+  height: 45%;
+}
+
 `
 
 export const NameDiv = styled.div`
@@ -88,10 +96,24 @@ margin-left: 3em;
 `
 
 export const Video = styled.video`
-width: 100%;
-height: 120%;
-position: absolute;
-bottom: 20em;
+@media ${device.mobileS} {
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  bottom: 20em;
+
+}
+
+@media ${device.tablet} {
+  height: 125%;
+  bottom: 5em;
+}
+
+@media ${device.laptopL} {
+  width: 100%;
+  height: 120%;
+  bottom: 20em;
+}
 `
 
 export const VideoCover = styled.div`
@@ -138,13 +160,24 @@ border-color: white;
 `
 
 export const SecondRow = styled.div`
-display: flex;
-background-color: white;
-z-index: 1;
-width: 100%;
-height: 45%;
-border-top: 1px solid white;
-border-bottom: 1px solid white
+@media ${device.mobileS} {
+
+}
+
+@media ${device.tablet} {
+  display: flex;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  height: 35%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white
+
+}
+
+@media ${device.laptopL} {
+  height: 45%;
+}
 `
 
 export const TextDiv = styled.div`
@@ -261,31 +294,44 @@ color: black;
 font-size: 1.2em;
 width: 100%;
 text-align: center;
-margin: -8em 1em 1em 1em;
+margin: -2em 1em 1em 1em;
 `
 
 export const SecondRight = styled.form`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-height: 100%;
-flex: 1;
-align-items: flex-start;
-background-color: #00142aa1;
-z-index: 2;
-overflow-y: auto;
-align-content: flex-start;
+@media ${device.tablet} {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+  align-items: flex-start;
+  background-color: #00142aa1;
+  z-index: 2;
+  overflow-y: auto;
+  align-content: flex-start;
+
+}
+
+@media ${device.laptopL} {
+}
 `
 
 export const InputBox = styled.div`
-width: 70%;
-height: 25%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-margin: 0em;
+@media ${device.tablet} {
+
+  width: 70%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0em;
+}
+
+@media ${device.laptopL} {
+  height: 25%;
+}
 `
 
 export const Question = styled.h1`

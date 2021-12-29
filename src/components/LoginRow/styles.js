@@ -34,9 +34,18 @@ flex-wrap: wrap;
 `
 
 export const Background = styled.img`
-position: absolute;
-width: 100%;
-height: 100%;
+
+@media ${device.tablet} {
+    position: absolute;
+    height: 140%;
+    width: 120%;
+
+    }
+  
+    @media ${device.laptopL} {
+        height: 100%;
+        width: 100%;
+    }
 `
 
 export const BackgroundCover = styled.div`
@@ -160,7 +169,7 @@ export const CreateButton = styled.button`
     width: 40%;
     height: 5%;
     background-color: #e0f1ff;
-    margin-top: 4em;
+    margin-top: 0em;
     }
 
     &:hover {
@@ -213,10 +222,227 @@ export const Paragraph = styled.p`
 export const CreateConfirm = styled.p`
 color: green;
 font-style: italic;
+font-family: monospace;
 font-size: 1em;
-display: flex;
 width: 100%;
 height: 2em;
 text-align: center;
 z-index: 4;
+display: block;
+`
+
+export const LoggedDiv = styled.div`
+display: flex;
+width: 100%;
+height: 100%;
+flex-direction: row;
+justify-content: flex-start;
+`
+
+export const InnerLeft = styled.div`
+display: flex;
+flex: 1;
+border-right: 1px solid white;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+`
+
+
+export const InnerRight = styled.div`
+display: flex;
+flex: 1;
+border-left: 1px solid white;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+`
+
+export const SecurityText = styled.p`
+font-size: 1.2em;
+color: white;
+width: 100%;
+text-align: center;
+`
+
+export const BlueColorButton = styled.button`
+width: 50%;
+height: 2em;
+margin-top: 1.5em;
+
+&:hover {
+    cursor: pointer;
+    background-color: blue
+}
+`
+export const RedColorButton = styled.button`
+width: 50%;
+height: 2em;
+margin-top: 1.5em;
+
+&:hover {
+    cursor: pointer;
+    background-color: red
+}
+`
+export const WhiteColorButton = styled.button`
+width: 50%;
+height: 2em;
+margin-top: 1.5em;
+
+&:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black
+}
+`
+
+export const GreenColorButton = styled.button`
+width: 50%;
+height: 2em;
+margin-top: 1.5em;
+
+&:hover {
+    cursor: pointer;
+    background-color: green
+}
+`
+
+export const Box = styled.div`
+display: flex;
+width: 60%;
+height: 10em;
+margin-top: 5em;
+z-index: 6;
+background-color: gray;
+display: inherit;
+`
+
+export const ProfileDiv = styled.div`
+@media ${device.mobileS} {
+    display: flex;
+    z-index: 5;
+    position: absolute;
+    top: 17em;
+    left: 1em;
+    flex-direction: column;
+}
+
+@media ${device.tablet} {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 15%;
+    width: 100%;
+    z-index: 5;
+}
+`
+
+export const Profile = styled.p`
+@media ${device.mobileS} {
+    color: #00d0ff;
+}
+
+@media ${device.tablet} {
+    color: black;
+    font-size: 1em;
+    font-family: emoji;
+}
+`
+
+export const ProfileImage= styled.img`
+width: 4%;
+height: 45%;
+`
+
+export const Logout = styled.button`
+@media ${device.mobileS} {
+
+    width: 70%;
+    background-color: #73f9ffa8;
+}
+
+@media ${device.tablet} {
+
+    height: 5%;
+    width: 20%;
+    margin-bottom: 0em;
+    margin-top: 0em;
+}
+
+&:hover {
+    background-color: #59b4ff;
+    cursor: pointer;
+}
+`
+
+export const HeaderFact = styled.h1`
+font-size: 1.5em;
+color: white;
+z-index: 6;
+width: 100%;
+text-align: center;
+`
+
+export const FunFact = styled.p`
+color: white;
+width: 80%;
+text-align: center;
+`
+
+export const ModalFormButton = styled.button`
+width: 30%;
+height: 1.7em;
+background-color: lightblue;
+z-index: 3;
+
+&:hover {
+    cursor: pointer;
+    background-color: aqua;
+    color: white;
+}
+`
+
+export const ModalDiv = styled.div`
+position: absolute;
+display: none;
+width: 100%;
+height: 60em;
+background-color: #000000a1;
+left: 0em;
+top: 120em;
+align-items: center;
+justify-content: center;
+z-index: 7;
+`
+
+export const InnerModal = styled.div`
+width: 50%;
+border-radius: 10%;
+height: 90%;
+display: flex;
+flex-direction: column;
+background-color: white;
+justify-content: flex-start;
+align-items: center;
+`
+
+export const FormTitle = styled.h1`
+font-size: 2em;
+color: black;
+width: 100%;
+text-align: center;
+`
+
+export const CloseButton = styled.h1`
+position: absolute;
+top: .5em;
+left: 1em;
+color: white;
+font-size: 1.9em;
+
+&:hover {
+    cursor: pointer;
+    color: red;
+}
 `

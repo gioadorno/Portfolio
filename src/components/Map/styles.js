@@ -24,11 +24,21 @@ const device = {
 
 
 export const MapDiv = styled.div`
+@media ${device.mobileS} {
+  display: flex;
+  width: 100%;
+  height: 56em;
+  border: 2px solid black;
 
-display: flex;
-width: 100%;
-height: 56em;
-border: 2px solid black;
+}
+
+@media ${device.tablet} {
+  height: 35em;
+  }
+
+  @media ${device.laptopL} {
+    height: 56em;
+  }
 `
 
 export const LeftMapDiv = styled.div`
@@ -45,7 +55,7 @@ export const LeftMapDiv = styled.div`
 @media ${device.tablet} {
 
   width: 40%;
-  height: 62%;
+  height: 130%;
   }
 
   @media ${device.laptopL} {

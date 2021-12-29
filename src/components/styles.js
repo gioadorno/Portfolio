@@ -28,7 +28,7 @@ export const MainDiv = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
-height: 80em;
+height: 210em;
 background-color: #f7ffff;
 justify-content: flex-start;
 align-items: center;
@@ -37,7 +37,7 @@ align-items: center;
 export const TopDiv = styled.div`
 display: flex;
 width: 100%;
-height: 25%;
+height: 45%;
 border-bottom: 1px solid black;
 align-items: center;
 justify-content: center;
@@ -264,7 +264,7 @@ text-align: center;
 margin: -8em 1em 1em 1em;
 `
 
-export const SecondRight = styled.div`
+export const SecondRight = styled.form`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -272,9 +272,10 @@ justify-content: center;
 height: 100%;
 flex: 1;
 align-items: flex-start;
-background-color: #0000009c;
+background-color: #00142aa1;
 z-index: 2;
 overflow-y: auto;
+align-content: flex-start;
 `
 
 export const InputBox = styled.div`
@@ -284,6 +285,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin: 0em;
 `
 
 export const Question = styled.h1`
@@ -297,4 +299,29 @@ export const Input = styled.input`
 width: 85%;
 height: 2em;
 box-shadow: 1px 1px 5px 2px #68c0ff9e;
+`
+
+export const Submit = styled.button`
+width: 35%;
+height: 2em;
+margin-top: 3em;
+box-shadow: 1px 1px 5px 3px #2db1ff5e;
+
+&:hover {
+  background-color: aqua;
+  color: white;
+  cursor: pointer;
+}
+`
+
+export const SubmitComplete = styled.p`
+color: green;
+display: none;
+width: 100%;
+text-align: center;
+font-weight: 550;
+font-size: 1em;
+margin-top: 0;
+font-style: italic;
+font-family: emoji
 `

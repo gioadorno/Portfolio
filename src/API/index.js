@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const API = axios.create({ baseURL: 'https://gio-portfolio.herokuapp.com/' });
 
 // Intercepts the request to access the website to check if there is a user. Then utilizing the token to grant access.
 API.interceptors.request.use((req) => {

@@ -9,7 +9,6 @@ const PropertyBox = ({ labels, details, classes }) => {
 
     const dispatch = useDispatch();
 
-    // Get logged in user info
     const props = useSelector((state) => state.properties);
 
     useEffect(() => {

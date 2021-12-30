@@ -39,11 +39,11 @@ export const Background = styled.img`
     position: absolute;
     height: 140%;
     width: 120%;
-
+    
     }
   
     @media ${device.laptopL} {
-        height: 80%;
+        height: 100%;
         width: 100%;
     }
 `
@@ -186,7 +186,7 @@ export const LoginButton = styled.button`
 
 @media ${device.tablet} {
     width: 40%;
-    height: 5%;
+    height: 7%;
     background-color: #e0f1ff;
     margin-top: 3em;
     }
@@ -312,7 +312,7 @@ export const Box = styled.div`
 display: flex;
 width: 60%;
 height: 10em;
-margin-top: 5em;
+margin-top: 3em;
 z-index: 6;
 background-color: gray;
 display: inherit;
@@ -447,3 +447,39 @@ font-size: 1.9em;
 }
 `
 
+export const TableDiv = styled.div`
+width: 90%;
+height: 70%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center:
+justify-content: flex-start;
+overflow-y: auto;
+background-color: white;
+z-index: 4;
+`
+
+export const Table = styled.table`
+width: 100%;
+height: 100%;
+`
+
+export const TableRow = styled.tr`
+border-bottom: 1px solid black;
+height: 1em;
+`
+
+export const TH = styled.th`
+color: black;
+border-right: 1px solid black;
+border-bottom: 1px solid black
+`
+
+export const TD = styled.td`
+color: black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+width: 70%;
+text-align: center;
+`

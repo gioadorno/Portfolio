@@ -31,10 +31,9 @@ export const Div = styled.div`
 }
 display: flex;
 width: 100%;
-height: 53em;
-border: 1px solid black;
-background-color: lightblue;
-z-index: 1;
+height: 67.4em;
+border-top: 1px solid white;
+z-index: 2;
 flex-direction: column;
 justify-content: flex-end;
 
@@ -50,9 +49,10 @@ export const Footerbar = styled.footer`
     position: initial;
     width: 100%;
     bottom: 0em;
-    margin-bottom: 0;
+    margin-bottom: 0em;
     flex-direction: row;
     justify-content: space-evenly;
+    z-index: 3;
 `
 
 export const FooterLink = styled.a`
@@ -70,4 +70,32 @@ export const FooterLink = styled.a`
 
 export const FooterText = styled.p`
 color: white;
+`
+
+export const Image = styled.img`
+width: 100%;
+height: 38%;
+z-index: 1;
+position: absolute;
+`
+
+export const ImageCover = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+background-color: #5cacffc7;
+z-index: 3;
+align-items: center;
+justify-content: flex-start;
+`
+
+export const P = styled.p`
+margin-top: 3em;
+font-size: 1.5em;
+font-family: cursive;
+color: black;
+font-weight: 550;
+width: 90%;
+text-align: center;
 `

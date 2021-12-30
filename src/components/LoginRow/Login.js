@@ -1,9 +1,10 @@
-import { Div, Background, BackgroundCover, LeftDiv, MiddleDiv, RightDiv, Header, LoginDiv, InputDiv, Input, Label, ButtonDiv, CreateButton, LoginButton, Select, Paragraph, CreateConfirm, LoggedDiv, InnerLeft, InnerRight, SecurityText, RedColorButton, BlueColorButton, GreenColorButton, WhiteColorButton, Box, ProfileDiv, Logout, HeaderFact, FunFact, ModalFormButton, ModalDiv, InnerModal, FormTitle, CloseButton } from "./styles";
+import { Div, Background, BackgroundCover, LeftDiv, MiddleDiv, RightDiv, Header, LoginDiv, InputDiv, Input, Label, ButtonDiv, CreateButton, LoginButton, Select, Paragraph, CreateConfirm, LoggedDiv, InnerLeft, InnerRight, SecurityText, RedColorButton, BlueColorButton, GreenColorButton, WhiteColorButton, Box, ProfileDiv, Logout, HeaderFact, FunFact, ModalFormButton, ModalDiv, InnerModal, FormTitle, CloseButton, Table, TableDiv, TableRow, TH, TD } from "./styles";
 import image from '../Video/pexels-burst-373974.jpg';
 import { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { userCreate, signin } from '../../actions/login';
+import { useSelector } from "react-redux";
 
 
 const initialState = { name: '', password: '', confirmPassword: '', securityLevel: '' };
@@ -17,6 +18,8 @@ const Login = ({ header, label, options, create, login, loginButton, name }) => 
     // Get logged in user info
     const user = JSON.parse(localStorage.getItem('profile'));
     const [user1, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+
+    const props = useSelector((state) => state.properties);
 
     const [createUser, setCreateUser] = useState(initialState);
     // State for login fields
@@ -141,7 +144,7 @@ const Login = ({ header, label, options, create, login, loginButton, name }) => 
                         {header.login}
                     </Header>
                     <LoginDiv onSubmit={loginSubmit}>
-                        <InputDiv>
+                        <InputDiv style={{ marginBottom: '1.5em' }}>
                             <Label>
                                 {login.username}
                             </Label>
@@ -156,9 +159,6 @@ const Login = ({ header, label, options, create, login, loginButton, name }) => 
                         <LoginButton>
                             {loginButton}
                         </LoginButton>
-                        <Paragraph>
-                            This section is to showcase creating a user and logging in with Authentication. I have also added a feature, if you have different security privileges, you will see different information related to that security level on the right hand side. Passwords are also encrypted utilizing Bcrypt. For general security reasons, please do not use a password you typically use, on this website, even though they are encrypted. Just makeup an easy one, so you can look at the features. <br/> Plus I have included fun facts about myself!
-                        </Paragraph>
                     </LoginDiv>
                 </MiddleDiv>
                 <RightDiv>
@@ -260,8 +260,32 @@ const Login = ({ header, label, options, create, login, loginButton, name }) => 
                                         Logout
                                     </Logout>
                                     <SecurityText>
-                                        Security Level: Level 2
+                                        Security Level: Level 2 <br/> <strong>Info from Form</strong>
                                     </SecurityText>
+                                    <TableDiv>
+                                        <Table>
+                                            <TableRow>
+                                                <TH>
+                                                    Address
+                                                </TH>
+                                                <TH>
+                                                    Name
+                                                </TH>
+                                            </TableRow>
+                                            {props.map((prop) => {
+                                                return (
+                                                <TableRow>
+                                                    <TD>
+                                                        {prop.address.replace(', USA', '')}
+                                                    </TD>
+                                                    <TD>
+                                                        {prop.name}
+                                                    </TD>
+                                                </TableRow>
+                                                )
+                                            })}
+                                        </Table>
+                                    </TableDiv>
                                 </InnerLeft>
                                 <InnerRight>
                                     <HeaderFact>
